@@ -4,6 +4,9 @@ var playerX = "X"
 var currPlayer = playerO;
 var gameOver = false;
 
+function refreshPage(){
+    window.location.reload();
+}
 
 window.onload = function() {
     setGame();
@@ -67,4 +70,5 @@ for (let r = 0; r < 3; r++) {
         
     }
 }
-}
+
+  }
