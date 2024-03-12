@@ -1,6 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    color: hotpink;
 }
 
 hr {
@@ -12,9 +13,10 @@ hr {
 #board {
     width: 450px;
     height: 450px;
-
-    background-color: yellow;
-
+    background-color: pink;
+    border-style: inset;
+    border-radius: 3%;
+    border-color: hotpink;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +39,7 @@ hr {
 .vertical-line {
     border-right: 3px solid black;
 }
+
 #reset {
    padding: 10px;  
    margin-top: 2%;
