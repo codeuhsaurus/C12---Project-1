@@ -88,33 +88,30 @@ for (let r = 0; r < 3; r++) {
     }
 }
 
-//diagonal check
-
-if (board[0][0] == board[1][1] == board[2][2] && board[0][0] != ' ') {
+/// Diagonal check
+if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ') {
     for (let i = 0; i < 3; i++) {
         let tile = document.getElementById(i.toString() + "-" + i.toString());
         tile.classList.add("winner");
     }
     gameOver = true;
     return;
-    }
+}
 
-    //anti-diagonal
-  
-        if (board [0][2] == board[1][1] && board [1][1] == board [2][0] && board [0][2] != ' ') {
+// Anti-diagonal check
+if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ') {
+    let tile1 = document.getElementById("0-2");
+    tile1.classList.add("winner");
 
-                let tile = document.getElementById("0-2");
-                tile.classList.add("winner");
-            
-                tile = document.getElementById("1-1");
-                tile.classList.add("winner");
+    let tile2 = document.getElementById("1-1");
+    tile2.classList.add("winner");
 
-                tile = document.getElementById("1-1");
-                tile.classList.add("winner");
-            gameOver = true;
-            return;
-        
-      } 
+    let tile3 = document.getElementById("2-0");
+    tile3.classList.add("winner");
+
+    gameOver = true;
+    return;
+}
 }
 
 
