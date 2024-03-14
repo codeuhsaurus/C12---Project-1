@@ -2,25 +2,45 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: hotpink;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: peachpuff;
 }
 
 hr {
-    width: 500px;
-    height: 3px;
-    background-color: black;
+    width: 450px;
+    height: 5px;
+    background-color: hotpink;
+    border-style: solid;
+    border-color: peachpuff;
+    border-width: 4px;
+}
+
+h1 {
+    font-size: 4em;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: peachpuff;
 }
 
 #board {
+    text-size: auto;
     width: 450px;
     height: 450px;
-    background-color: pink;
-    border-style: inset;
+    background-color: rgb(252, 179, 229);
+    border-style: solid;
     border-radius: 3%;
-    border-color: hotpink;
+    border-color: peachpuff;
+    border-width: 5px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+
 }
+
+.tile.winner {
+    background-color: rgb(239, 0, 215); /* Change background color */
+    color: #333; /* Change text color */
+}
+
 
 .tile {
     width: 147px;
@@ -33,15 +53,24 @@ hr {
 }
 
 .horizontal-line {
-    border-bottom: 3px solid black;
+    border-bottom: 4px solid hotpink;
 }
 
 .vertical-line {
-    border-right: 3px solid black;
+    border-right: 4px solid hotpink;
+
 }
 
+
 #reset {
-   padding: 10px;  
+   padding: 8px;  
    margin-top: 2%;
-   font-size: medium;
+   font-size: 28px;
+   border-radius: 15px;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: peachpuff;
+   color: hotpink;
+   background-color: transparent;
+   border-width: 1px;
+   border-style: solid;
 }
