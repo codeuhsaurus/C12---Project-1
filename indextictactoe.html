@@ -29,6 +29,15 @@
     <!--3x3-->
     <div id="board"></div> 
     <div><button id="reset" onclick="refreshPage()">Restart Game</button></div>
+    <div class = "timeBox">
+   <div id="container"></div>
+<script>
+    let time = document.getElementById("container");
     
+    setInterval(() =>{
+    let d = new Date();
+    time.innerHTML = d.toLocaleTimeString();
+},1000)
+</script></div>
 </body>
 </html>
