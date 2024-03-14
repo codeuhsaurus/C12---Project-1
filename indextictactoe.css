@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Madimi One", Arial, Helvetica, sans-serif;
     text-align: center;
     color: hotpink;
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: peachpuff;
 }
+
 
 hr {
     width: 450px;
@@ -13,12 +17,15 @@ hr {
     border-style: solid;
     border-color: peachpuff;
     border-width: 4px;
+    margin-block: 1px;
+    border-radius: 10px;
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 5em;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: peachpuff;
+    margin-bottom: 10px;
 }
 
 #board {
@@ -36,9 +43,26 @@ h1 {
 
 }
 
+/* Define keyframes for the animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Apply the animation to the background */
+body {
+    background: linear-gradient(to right, PeachPuff, HotPink);
+    background-size: 200% 200%; /* Increase the size to create the sliding effect */
+    animation: gradientAnimation 10s ease infinite; /* Adjust the duration (10s) and timing function (ease) as needed */
+}
+
+
 .tile.winner {
     background-color: rgb(239, 0, 215); /* Change background color */
-    color: #333; /* Change text color */
+    color: rgb(252, 179, 229) ; /* Change text color */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: peachpuff;
 }
 
 
@@ -65,12 +89,15 @@ h1 {
 #reset {
    padding: 8px;  
    margin-top: 2%;
-   font-size: 28px;
+   font-size: 50px;
    border-radius: 15px;
-   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: peachpuff;
    color: hotpink;
    background-color: transparent;
    border-width: 1px;
    border-style: solid;
+   border-color: hotpink;
+   font-family: "Madimi One", Helvetica, sans-serif;
+
 }
